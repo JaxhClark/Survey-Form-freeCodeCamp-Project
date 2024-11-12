@@ -1,0 +1,170 @@
+** start of html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Jax's Survey Form</title>
+</head>
+
+<body>
+  <h1 id="title">CAT SURVEY FORM</h1>
+  <p id="description">Please spare some time to complete this survey</p>
+
+  <form id="survey-form">
+    <h2>PERSONAL INFORMATION</h2>
+    <fieldset>
+      <label for="name" id="name-label">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email" id="email-label">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="number" id="number-label">Age (optional)</label>
+      <input type="number" id="number" name="number" placeholder="Enter your age" min="13" max="120">
+    </fieldset>
+
+    <h2>QUESTIONS</h2>
+    <fieldset>
+      <legend>Do you have cats?</legend>
+      <label for="yes"><input type="checkbox" id="yes" name="hasCats" value="yes" class="inline" required>Yes
+      </label>
+
+      <label for="no"><input type="checkbox" id="no" name="hasCats" value="no" class="inline" required>No
+      </label>
+
+      <label for="maybe"><input type="checkbox" id="maybe" name="hasCats" value="maybe" class="inline" required>Maybe
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="catnumber">If so, how many?</label>
+      <input type="number" id="catnumber" name="catnumber" placeholder="Enter how many cats you have" min="1" max="100">
+    </fieldset>
+
+    <fieldset>
+      <legend>Do you love cats?</legend>
+      <input type="radio" id="love" name="loveorhate" value="love" class="inline" required>
+      <label for="love">I love them</label>
+
+      <input type="radio" id="hate" name="loveorhate" value="hate" class="inline" required>
+      <label for="hate">God no</label>
+    </fieldset>
+
+    <h2>OPTIONAL</h2>
+    <fieldset>
+      <label for="personality">If applicable, provide a description of their personality</label>
+      <textarea id="personality" name="personality" placeholder="It loves water..." rows="3" cols="30"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <label for="dropdown">Will you ever have a cat?</label>
+      <select id="dropdown" name="dropdown">
+        <option value="">(select one)</option>
+        <option value="1">YES!</option>
+        <option value="2">Nah</option>
+        <option value="3">Maybe</option>
+        <option value="4">Probably not</option>
+        <option value="5">Thinking about it</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label for="feedback">Could you please provide feedback?</label>
+      <textarea id="feedback" name="feedback" placeholder="Stop making websites buddy..." rows="3" cols="30"></textarea>
+    </fieldset>
+
+    <input id="terms-and-conditions" type="checkbox" name="terms-and-conditions" class="inline" value="accept" required>
+    <label for="terms-and-conditions">I have read and accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms of conditions</a></label>
+    <input id="submit" type="submit" value="SUBMIT" class="inline">
+  </form>
+</body>
+</html>
+
+** end of html **
+
+** start of stylesheet **
+
+html {
+  background-image: url(https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_3x4.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  padding: 10%;
+}
+
+body {
+  width: 70vw;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  background-color: #262629;
+  opacity: 98%;
+  color: #f5f6f7;
+  font-family: helvetica;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+h1, h2, p , legend {
+  margin: auto;
+  text-align: left;
+  width: 100%;
+}
+
+h2 {
+  padding-top: 5%;
+}
+
+form {
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 1%;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  margin: auto;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #101012;
+  border: 5px solid #101012;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  display: inline;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 20%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #17171a;
+  border-color: #101012;
+  min-width: 100px;
+}
+
+** end of stylesheet **
